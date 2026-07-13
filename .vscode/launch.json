@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ST-Link Debug",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "device": "STM32F411CEUx",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "executable": "${workspaceFolder}/build/Drone_fc_v1.elf",
+      "runToEntryPoint": "main",
+      "svdFile": "${workspaceFolder}/STM32F411.svd"
+    }
+  ]
+}
